@@ -23,9 +23,9 @@ class FCC:
         self.point_vec0[:, 7] = [-0.5, -0.5, -0.5]
         self.point_vec0[:, 8] = [0., 0., 0.5]
         self.point_vec0[:, 9] = [0., 0., -0.5]
-        self.point_vec0[:,10] = [0.3, 0., 0.]
-        self.point_vec0[:,11] = [0., 0.3, 0.]
-        self.point_vec0[:,12] = [0., 0., 0.3]
+        self.point_vec0[:, 10] = [0.3, 0., 0.]
+        self.point_vec0[:, 11] = [0., 0.3, 0.]
+        self.point_vec0[:, 12] = [0., 0., 0.3]
         # Vertex
         self.point_vec = self.point_vec0.copy()
         # Slip direction
@@ -86,7 +86,7 @@ class FCC:
                self.point_vec[2, 2],
                self.point_vec[2, 3],
                self.point_vec[2, 0]],
-            line = dict(width = 6, color='black'),
+            line=dict(width=6, color='black'),
             showlegend=False
         )
 
@@ -106,7 +106,7 @@ class FCC:
                self.point_vec[2, 6],
                self.point_vec[2, 7],
                self.point_vec[2, 4]],
-            line = dict(width = 6, color='black'),
+            line=dict(width=6, color='black'),
             showlegend=False
         )
 
@@ -114,7 +114,7 @@ class FCC:
             x=[self.point_vec[0, 0], self.point_vec[0, 4]],
             y=[self.point_vec[1, 0], self.point_vec[1, 4]],
             z=[self.point_vec[2, 0], self.point_vec[2, 4]],
-            line = dict(width = 6, color='black'),
+            line=dict(width=6, color='black'),
             showlegend=False
         )
 
@@ -122,7 +122,7 @@ class FCC:
             x=[self.point_vec[0, 1], self.point_vec[0, 5]],
             y=[self.point_vec[1, 1], self.point_vec[1, 5]],
             z=[self.point_vec[2, 1], self.point_vec[2, 5]],
-            line = dict(width = 6, color='black'),
+            line=dict(width=6, color='black'),
             showlegend=False
         )
 
@@ -130,7 +130,7 @@ class FCC:
             x=[self.point_vec[0, 2], self.point_vec[0, 6]],
             y=[self.point_vec[1, 2], self.point_vec[1, 6]],
             z=[self.point_vec[2, 2], self.point_vec[2, 6]],
-            line = dict(width = 6, color='black'),
+            line=dict(width=6, color='black'),
             showlegend=False
         )
 
@@ -138,31 +138,31 @@ class FCC:
             x=[self.point_vec[0, 3], self.point_vec[0, 7]],
             y=[self.point_vec[1, 3], self.point_vec[1, 7]],
             z=[self.point_vec[2, 3], self.point_vec[2, 7]],
-            line = dict(width = 6, color='black'),
+            line=dict(width=6, color='black'),
             showlegend=False
         )
 
         go_axis_x = go.Scatter3d(
-            x=[0., self.point_vec[0,10]],
-            y=[0., self.point_vec[1,10]],
-            z=[0., self.point_vec[2,10]],
-            line = dict(width = 6, color='red'),
+            x=[0., self.point_vec[0, 10]],
+            y=[0., self.point_vec[1, 10]],
+            z=[0., self.point_vec[2, 10]],
+            line=dict(width=6, color='red'),
             showlegend=False
         )
 
         go_axis_y = go.Scatter3d(
-            x=[0., self.point_vec[0,11]],
-            y=[0., self.point_vec[1,11]],
-            z=[0., self.point_vec[2,11]],
-            line = dict(width = 6, color='blue'),
+            x=[0., self.point_vec[0, 11]],
+            y=[0., self.point_vec[1, 11]],
+            z=[0., self.point_vec[2, 11]],
+            line=dict(width=6, color='blue'),
             showlegend=False
         )
 
         go_axis_z = go.Scatter3d(
-            x=[0., self.point_vec[0,12]],
-            y=[0., self.point_vec[1,12]],
-            z=[0., self.point_vec[2,12]],
-            line = dict(width = 6, color='green'),
+            x=[0., self.point_vec[0, 12]],
+            y=[0., self.point_vec[1, 12]],
+            z=[0., self.point_vec[2, 12]],
+            line=dict(width=6, color='green'),
             showlegend=False
         )
 
@@ -174,99 +174,99 @@ class FCC:
         self.base_m = np.zeros((3, 12))
 
         # set slip direction vector
-        self.base_s[0, 0] =  0.0000000000000000
+        self.base_s[0, 0] = 0.0000000000000000
         self.base_s[1, 0] = -0.7071067811865475
-        self.base_s[2, 0] =  0.7071067811865475
+        self.base_s[2, 0] = 0.7071067811865475
 
-        self.base_s[0, 1] =  0.7071067811865475
-        self.base_s[1, 1] =  0.0000000000000000
-        self.base_s[2, 1] =  0.7071067811865475
+        self.base_s[0, 1] = 0.7071067811865475
+        self.base_s[1, 1] = 0.0000000000000000
+        self.base_s[2, 1] = 0.7071067811865475
 
-        self.base_s[0, 2] =  0.7071067811865475
-        self.base_s[1, 2] =  0.7071067811865475
-        self.base_s[2, 2] =  0.0000000000000000
+        self.base_s[0, 2] = 0.7071067811865475
+        self.base_s[1, 2] = 0.7071067811865475
+        self.base_s[2, 2] = 0.0000000000000000
 
-        self.base_s[0, 3] =  0.0000000000000000
+        self.base_s[0, 3] = 0.0000000000000000
         self.base_s[1, 3] = -0.7071067811865475
-        self.base_s[2, 3] =  0.7071067811865475
+        self.base_s[2, 3] = 0.7071067811865475
 
         self.base_s[0, 4] = -0.7071067811865475
-        self.base_s[1, 4] =  0.0000000000000000
-        self.base_s[2, 4] =  0.7071067811865475
+        self.base_s[1, 4] = 0.0000000000000000
+        self.base_s[2, 4] = 0.7071067811865475
 
         self.base_s[0, 5] = -0.7071067811865475
-        self.base_s[1, 5] =  0.7071067811865475
-        self.base_s[2, 5] =  0.0000000000000000
+        self.base_s[1, 5] = 0.7071067811865475
+        self.base_s[2, 5] = 0.0000000000000000
 
-        self.base_s[0, 6] =  0.0000000000000000
-        self.base_s[1, 6] =  0.7071067811865475
-        self.base_s[2, 6] =  0.7071067811865475
+        self.base_s[0, 6] = 0.0000000000000000
+        self.base_s[1, 6] = 0.7071067811865475
+        self.base_s[2, 6] = 0.7071067811865475
 
-        self.base_s[0, 7] =  0.7071067811865475
-        self.base_s[1, 7] =  0.0000000000000000
-        self.base_s[2, 7] =  0.7071067811865475
+        self.base_s[0, 7] = 0.7071067811865475
+        self.base_s[1, 7] = 0.0000000000000000
+        self.base_s[2, 7] = 0.7071067811865475
 
         self.base_s[0, 8] = -0.7071067811865475
-        self.base_s[1, 8] =  0.7071067811865475
-        self.base_s[2, 8] =  0.0000000000000000
+        self.base_s[1, 8] = 0.7071067811865475
+        self.base_s[2, 8] = 0.0000000000000000
 
-        self.base_s[0, 9] =  0.0000000000000000
-        self.base_s[1, 9] =  0.7071067811865475
-        self.base_s[2, 9] =  0.7071067811865475
+        self.base_s[0, 9] = 0.0000000000000000
+        self.base_s[1, 9] = 0.7071067811865475
+        self.base_s[2, 9] = 0.7071067811865475
 
-        self.base_s[0,10] = -0.7071067811865475
-        self.base_s[1,10] =  0.0000000000000000
-        self.base_s[2,10] =  0.7071067811865475
+        self.base_s[0, 10] = -0.7071067811865475
+        self.base_s[1, 10] = 0.0000000000000000
+        self.base_s[2, 10] = 0.7071067811865475
 
-        self.base_s[0,11] =  0.7071067811865475
-        self.base_s[1,11] =  0.7071067811865475
-        self.base_s[2,11] =  0.0000000000000000
+        self.base_s[0, 11] = 0.7071067811865475
+        self.base_s[1, 11] = 0.7071067811865475
+        self.base_s[2, 11] = 0.0000000000000000
 
         # set normal to slip direction vector
         self.base_m[0, 0] = -0.5773502691896257
-        self.base_m[1, 0] =  0.5773502691896257
-        self.base_m[2, 0] =  0.5773502691896257
+        self.base_m[1, 0] = 0.5773502691896257
+        self.base_m[2, 0] = 0.5773502691896257
 
         self.base_m[0, 1] = -0.5773502691896257
-        self.base_m[1, 1] =  0.5773502691896257
-        self.base_m[2, 1] =  0.5773502691896257
+        self.base_m[1, 1] = 0.5773502691896257
+        self.base_m[2, 1] = 0.5773502691896257
 
         self.base_m[0, 2] = -0.5773502691896257
-        self.base_m[1, 2] =  0.5773502691896257
-        self.base_m[2, 2] =  0.5773502691896257
+        self.base_m[1, 2] = 0.5773502691896257
+        self.base_m[2, 2] = 0.5773502691896257
 
-        self.base_m[0, 3] =  0.5773502691896257
-        self.base_m[1, 3] =  0.5773502691896257
-        self.base_m[2, 3] =  0.5773502691896257
+        self.base_m[0, 3] = 0.5773502691896257
+        self.base_m[1, 3] = 0.5773502691896257
+        self.base_m[2, 3] = 0.5773502691896257
 
-        self.base_m[0, 4] =  0.5773502691896257
-        self.base_m[1, 4] =  0.5773502691896257
-        self.base_m[2, 4] =  0.5773502691896257
+        self.base_m[0, 4] = 0.5773502691896257
+        self.base_m[1, 4] = 0.5773502691896257
+        self.base_m[2, 4] = 0.5773502691896257
 
-        self.base_m[0, 5] =  0.5773502691896257
-        self.base_m[1, 5] =  0.5773502691896257
-        self.base_m[2, 5] =  0.5773502691896257
+        self.base_m[0, 5] = 0.5773502691896257
+        self.base_m[1, 5] = 0.5773502691896257
+        self.base_m[2, 5] = 0.5773502691896257
 
         self.base_m[0, 6] = -0.5773502691896257
         self.base_m[1, 6] = -0.5773502691896257
-        self.base_m[2, 6] =  0.5773502691896257
+        self.base_m[2, 6] = 0.5773502691896257
 
         self.base_m[0, 7] = -0.5773502691896257
         self.base_m[1, 7] = -0.5773502691896257
-        self.base_m[2, 7] =  0.5773502691896257
+        self.base_m[2, 7] = 0.5773502691896257
 
         self.base_m[0, 8] = -0.5773502691896257
         self.base_m[1, 8] = -0.5773502691896257
-        self.base_m[2, 8] =  0.5773502691896257
+        self.base_m[2, 8] = 0.5773502691896257
 
-        self.base_m[0, 9] =  0.5773502691896257
+        self.base_m[0, 9] = 0.5773502691896257
         self.base_m[1, 9] = -0.5773502691896257
-        self.base_m[2, 9] =  0.5773502691896257
+        self.base_m[2, 9] = 0.5773502691896257
 
-        self.base_m[0,10] =  0.5773502691896257
-        self.base_m[1,10] = -0.5773502691896257
-        self.base_m[2,10] =  0.5773502691896257
+        self.base_m[0, 10] = 0.5773502691896257
+        self.base_m[1, 10] = -0.5773502691896257
+        self.base_m[2, 10] = 0.5773502691896257
 
-        self.base_m[0,11] =  0.5773502691896257
-        self.base_m[1,11] = -0.5773502691896257
-        self.base_m[2,11] =  0.5773502691896257
+        self.base_m[0, 11] = 0.5773502691896257
+        self.base_m[1, 11] = -0.5773502691896257
+        self.base_m[2, 11] = 0.5773502691896257

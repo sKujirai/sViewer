@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Log in | sViewer{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row">
+        <div class="my-div-style">
+            <h1>Log In</h1>
+            <form method="post" action="{% url 'account_login' %}">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+
+                <button class="btn btn-primary" type="submit">Log In</button>
+                <!-- <p><a class="button secondaryAction" href="{% url 'account_reset_password' %}">Forget password ?</a></p> -->
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

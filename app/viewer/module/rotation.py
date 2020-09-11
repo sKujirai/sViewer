@@ -4,21 +4,27 @@ import numpy as np
 class Rotation:
 
     def degree_to_radius(self, the):
-        return [np.pi*t/180. for t in the]
+        return [np.pi * t / 180. for t in the]
 
     def make_rotation_matrix_xyz(self, the):
 
-        Rx = np.array([[1., 0., 0.],
-                    [0., np.cos(the[0]), -np.sin(the[0])],
-                    [0., np.sin(the[0]), np.cos(the[0])]])
+        Rx = np.array([
+            [1., 0., 0.],
+            [0., np.cos(the[0]), -np.sin(the[0])],
+            [0., np.sin(the[0]), np.cos(the[0])]
+        ])
 
-        Ry = np.array([[np.cos(the[1]), 0., np.sin(the[1])],
-                    [0., 1., 0.],
-                    [-np.sin(the[1]), 0., np.cos(the[1])]])
+        Ry = np.array([
+            [np.cos(the[1]), 0., np.sin(the[1])],
+            [0., 1., 0.],
+            [-np.sin(the[1]), 0., np.cos(the[1])]
+        ])
 
-        Rz = np.array([[np.cos(the[2]), -np.sin(the[2]), 0.],
-                    [np.sin(the[2]), np.cos(the[2]), 0.],
-                    [0., 0., 1.]])
+        Rz = np.array([
+            [np.cos(the[2]), -np.sin(the[2]), 0.],
+            [np.sin(the[2]), np.cos(the[2]), 0.],
+            [0., 0., 1.]
+        ])
 
         return np.dot(Rz, np.dot(Ry, Rx))
 

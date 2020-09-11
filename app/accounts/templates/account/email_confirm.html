@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirm sign up | sViewer{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row">
+        <div class="my-div-style">
+            <h1>Register a new accout</h1>
+
+            {% if confirmation %}
+
+                <p>Press confirm to register a new account</p>
+
+                <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                    {% csrf_token %}
+                    <button class="btn btn-primary" type="submit">Confirm</button>
+                </form>
+
+            {% else %}
+
+                {% url 'account_email' as email_url %}
+
+                <p>This link has expired. <a href="{{ email_url }}">Reregistration</a>.</p>
+
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

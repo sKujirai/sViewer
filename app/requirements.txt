@@ -6,3 +6,4 @@ channels-redis==3.1.0
 django-redis==4.12.1
 dpd-static-support==0.0.5
 numpy==1.19.1
+django-allauth==0.42.0
