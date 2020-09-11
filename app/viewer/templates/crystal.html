@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}sViewer{% endblock %}
+
+{% block active_crystal %}active{% endblock %}
+
+
+{% block contents %}
+
+{% load plotly_dash %}
+<div class="{% plotly_class name='crystal' %} card" style="height: 100%; width: 100%;">
+  {% plotly_app name='crystal' ratio=1.0 %}
+</div>
+
+{% endblock %}
