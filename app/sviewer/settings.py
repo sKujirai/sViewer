@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     'viewer.apps.ViewerConfig',
     'accounts.apps.AccountsConfig',
+    'crystal.apps.CrystalConfig',
 
     'django.contrib.sites',
     'allauth',
