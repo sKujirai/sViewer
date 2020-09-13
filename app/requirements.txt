@@ -7,3 +7,5 @@ django-redis==4.12.1
 dpd-static-support==0.0.5
 numpy==1.19.1
 django-allauth==0.42.0
+Pillow==7.0.0
+matplotlib==3.1.0

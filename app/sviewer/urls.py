@@ -24,4 +24,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('accounts/signup/', TemplateView.as_view(template_name='signup.html'), name='signup'),
     path('crystal/', include('crystal.urls')),
+    path('mesh/', include('mesh.urls')),
 ]

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Mesh | sViewer{% endblock %}
+
+{% block contents %}
+{% load plotly_dash %}
+<div class="{% plotly_class name='mesh' %} card" style="height: 100%; width: 100%;">
+  {% plotly_app name='mesh' ratio=1.0 %}
+</div>
+{% endblock %}

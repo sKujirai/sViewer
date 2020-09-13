@@ -10,7 +10,7 @@ ENV PYTHONUNBUFFERED 1
 
 # install psycopg2
 RUN apk update \
-    && apk add --virtual build-deps gcc g++ python3-dev musl-dev libffi libffi-dev \
+    && apk add --virtual build-deps gcc g++ python3-dev musl-dev libffi libffi-dev zlib-dev libjpeg jpeg-dev build-base freetype-dev \
     && apk add --update bash \
     && apk add postgresql-dev \
     && pip install psycopg2 \
