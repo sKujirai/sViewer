@@ -53,6 +53,7 @@ RUN pip install --no-cache /wheels/*
 
 # copy entrypoint-prod.sh
 COPY ./entrypoint.prod.sh $APP_HOME
+RUN chmod a+x $APP_HOME/entrypoint.prod.sh
 
 # copy project
 COPY . $APP_HOME
