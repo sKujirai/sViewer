@@ -25,7 +25,7 @@ services:
     volumes:
       - static_volume:/home/app/web/static
     ports:
-      - 1337:80
+      - "${NGINX_PORT}:80"
     depends_on:
       - web
 
